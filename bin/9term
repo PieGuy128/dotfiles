@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+start9
+
+exec $PLAN9/bin/9term -s -f $font $*

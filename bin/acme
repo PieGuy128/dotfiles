@@ -1,0 +1,5 @@
+#!/usr/bin/env rc
+
+start9
+
+exec $PLAN9/bin/acme -a -f $font $*

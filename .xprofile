@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export TERMINAL=st
+export BROWSER=firefox
+export EDITOR=E
+unset FCEDIT VISUAL

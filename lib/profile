@@ -1,0 +1,37 @@
+#!/usr/bin/env rc
+
+LANG=en_CA.UTF-8
+LC_COLLATE=C
+
+. $PLAN9/bin/9.rc
+
+JAVA_HOME=/usr/lib64/java
+GOROOT=/usr/lib64/go1.10.2/go
+GOPATH=$home/go
+
+EDITOR=E
+PAGER=nobs
+MANPAGER=nobs
+TERM=dumb
+path=($home/bin $GOPATH/bin $path /usr/local/sbin /usr/sbin /sbin /usr/games $GOROOT/bin $JAVA_HOME/bin $JAVA_HOME/jre/bin)
+MANPATH=$PLAN9/man:/usr/local/man:/usr/man:$JAVA_HOME/man
+tabstop=4
+
+PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig:/usr/local/share/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig
+GDK_USE_XFT=1
+G_FILENAME_ENCODING=@locale
+G_BROKEN_FILENAMES=1
+XDG_DATA_DIRS=/home/pieguy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+QT4DIR=/usr/lib64/qt
+CPLUS_INCLUDE_PATH=$QT4DIR/include
+QT5DIR=/usr/lib64/qt5
+T1LIB_CONFIG=/usr/share/t1lib/t1lib.config
+
+
+font='/mnt/font/Go Mono/11a/font'
+if (pgrep Xorg > /dev/null) {
+	
+}
+if not {
+	exec dbus-launch --exit-with-session startx
+}

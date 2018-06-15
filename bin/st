@@ -1,0 +1,4 @@
+#!/bin/mksh
+
+SHELL=mksh
+exec /usr/local/bin/st $@
